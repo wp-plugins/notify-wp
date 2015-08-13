@@ -1,4 +1,4 @@
-=== notify for WordPress ===
+=== notify-wp ===
 Contributors: Shunsuke Hayashi
 Donate link: 
 Tags: ntfy.jp,notify,api,notification
