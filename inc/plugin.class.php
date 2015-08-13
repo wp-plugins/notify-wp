@@ -21,19 +21,29 @@ class Notify_Plugin {
 	}
 
 	public function publish_post_hook($strNewStatus, $strOldStatus, $post) {
+		
 		if ((defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)) {
 			return;
 		}
+		
 		$post_type = $post -> post_type;
+		// $post_type "page":"固定ページ", "post":"投稿"
 
 		if (($strOldStatus == 'draft' || $strOldStatus == 'auto-draft' || $strOldStatus == 'new') && $strNewStatus == 'publish') :
 			// New post/page published
 			$hooks = $this -> get_options();
-			$msg = $hooks -> notification_message;
-			$msg = str_replace("%title%", $post -> post_title, $msg);
-// 			$msg = str_replace("%url%", get_permalink($post -> ID), $msg);
-			$msg = str_replace("%url%", wp_get_shortlink($post -> ID), $msg);
-			$this -> api -> publish_post($msg);
+
+			if( ( $hooks -> notification_type_post && $post_type == "post") 
+				|| ( $hooks -> notification_type_page && $post_type == "page") ) {
+	
+				$msg = $hooks -> notification_message;
+				$msg = str_replace("%title%", $post -> post_title, $msg);
+// 				$msg = str_replace("%url%", get_permalink($post -> ID), $msg);
+				$msg = str_replace("%url%", wp_get_shortlink($post -> ID), $msg);
+				$this -> api -> publish_post($msg);
+			
+			}
+			
 		endif;
 	}
 

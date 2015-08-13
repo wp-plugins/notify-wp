@@ -22,7 +22,7 @@ class Notify_API {
 	}
 
 	public function publish_post($msg){
-		if($msg == "") $msg = "(no title)";
+		//if($msg == "") $msg = "(no title)";
 		$url  = $this->get_notify_send_message_link();
 		$url .= "?title=".urlencode($msg);
 		$url .= "&token=".$this->notification_token;
