@@ -7,6 +7,8 @@ if(empty($notification_message)){
 	$notification_message = "ブログを更新しました。 %title% %url%";
 }
 $notification_embed = @$ops->notification_embed;
+$notification_type_post = @$ops->notification_type_post;
+$notification_type_page = @$ops->notification_type_page;
 ?>
 
 <div class="wrap">
@@ -43,6 +45,26 @@ $notification_embed = @$ops->notification_embed;
 					value="<?php echo @$ops->notification_token ?>" class="regular-text">
 				</td>
 			</tr>
+			
+			<tr valign="top">
+				<th scope="row"><label for="notification_token">通知のタイプ</label></th>
+				<td>
+					<fieldset>
+					<legend class="screen-reader-text"><span>整形</span></legend>
+					<label for="notification_type_post">
+						<input name="notification_type_post" type="checkbox" id="notification_type_post" value="1" 
+						<?php if($notification_type_post) {echo 'checked="checked"'; } ?>>
+						投稿
+					</label><br />
+					<label for="notification_type_page">
+						<input name="notification_type_page" type="checkbox" id="notification_type_page" value="1" 
+						<?php if($notification_type_post) {echo 'checked="checked"'; } ?>>
+						固定ページ
+					</label>
+					</fieldset>
+				</td>
+			</tr>
+			
 			<tr valign="top">
 				<th scope="row"><label for="notification_message">通知メッセージ</label></th>
 				<td>
