@@ -4,19 +4,15 @@ Donate link:
 Tags: ntfy.jp,notify,api,notification
 Requires at least: 3.6.1
 Tested up to: 4.2.2
-Stable tag: 1.0.0
+Stable tag: 1.1.1
 License: The MIT License
 License URI: http://opensource.org/licenses/MIT
 
-This plugin sends notifications to any ntfy.jp when an event triggered in WordPress.
+WordPressの投稿をhttps://ntfy.jpで通知します
 
-== Description ==
+== Description ==    
 
-You can contribute to this project on [GitHub](https://github.com/linkillhz/notify-wordpress "notify WordPress"). **And yes you can send your new feature requests to [here](https://github.com/linkillhz/notify-wordpress/issues)**.    
-
-This plugin sends notifications when
-
- 1. a new post/page/custom post type published
+固定ページ、新規投稿が公開されると通知を送信します。
 
 = AUTHOR =
  * [Shunsuke Hayashi](http://kokonotsu.net)
@@ -25,15 +21,15 @@ This plugin sends notifications when
  
 == Installation ==
 
-1. Create a new notify account on [here](https://ntfy.jp/sender/sign_in "New notify account")
-2. Create a new notification and get **token**
-3. Activate the plugin through the 'Plugins' menu in WordPress
-4. Add **token** and **message** codes on *Settings > notify* page. Click **SAVE** button.
+1. [ntfy.jp](https://ntfy.jp/sender/sign_in "New notify account") でアカウントを作成してください
+2. 通知を作成し **token** を取得します
+3. WordPressでプラグインを有効化してください
+4. 設定 > notify ページで **通知のtoken** と **通知のタイプ**、 **通知メッセージ** を入力し「変更を保存」してください
 
 == Changelog ==
 
 = 1.1 =
-* Select post type, bug fix.
+Select notification type, bug fix.
 
 = 1.0 =
 * First stable tag. Hello World !

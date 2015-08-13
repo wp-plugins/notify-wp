@@ -29,7 +29,7 @@ class Notify_Plugin {
 		$post_type = $post -> post_type;
 		// $post_type "page":"固定ページ", "post":"投稿"
 
-		if (($strOldStatus == 'draft' || $strOldStatus == 'auto-draft' || $strOldStatus == 'new') && $strNewStatus == 'publish') :
+		if (($strOldStatus == 'pending' || $strOldStatus == 'future' || $strOldStatus == 'private' || $strOldStatus == 'draft' || $strOldStatus == 'auto-draft' || $strOldStatus == 'new') && $strNewStatus == 'publish') :
 			// New post/page published
 			$hooks = $this -> get_options();
 
