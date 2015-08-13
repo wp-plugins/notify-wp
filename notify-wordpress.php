@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: notify-wp
-Plugin URI: http://wordpress.org/plugins/notify-wordpress/
+Plugin URI: http://wordpress.org/plugins/notify-wp/
 Description: notify.jp for WordPress.
 Author: Shunsuke Hayashi
 Version: 1.1.1
