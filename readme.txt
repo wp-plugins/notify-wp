@@ -32,5 +32,8 @@ This plugin sends notifications when
 
 == Changelog ==
 
+= 1.1 =
+* Select post type.
+
 = 1.0 =
 * First stable tag. Hello World !
