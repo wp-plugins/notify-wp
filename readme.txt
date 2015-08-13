@@ -8,11 +8,14 @@ Stable tag: 1.1.1
 License: The MIT License
 License URI: http://opensource.org/licenses/MIT
 
-WordPressの投稿をhttps://ntfy.jpで通知します
+通知共有Webサービス「notify」と連携することができるプラグインです。
 
 == Description ==    
 
-固定ページ、新規投稿が公開されると通知を送信します。
+WordPressで新規投稿すると、notify（https://ntfy.jp）上の通知を自動的に送信することができます。
+RSSリーダーなんてもう使わない読者のために、サイトの更新を通知しましょう。
+notifyの詳細についてはこちらをごらんください。https://ntfy.jp/about
+
 
 = AUTHOR =
  * [Shunsuke Hayashi](http://kokonotsu.net)
@@ -26,7 +29,12 @@ WordPressの投稿をhttps://ntfy.jpで通知します
 3. WordPressでプラグインを有効化してください
 4. 設定 > notify ページで **通知のtoken** と **通知のタイプ**、 **通知メッセージ** を入力し「変更を保存」してください
 
+インストール方法の詳細はこちらです。https://ntfy.jp/api/documents/wordpress
+
 == Changelog ==
+
+= 1.1.1 =
+bug fix.
 
 = 1.1 =
 Select notification type, bug fix.
